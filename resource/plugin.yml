@@ -1,0 +1,16 @@
+name: SimpleItemBind
+version: 1.0.0
+authors: [Cthuwork]
+
+main: net.cthuwork.simpleitembind.SimpleItemBind
+
+commands:
+  SimpleItemBind:
+    aliases: sib
+permissions:
+  sib.use:
+    description: 被允许销毁绑定物品
+    default: true
+  sib.admin:
+    description: 获得SIB插件的所有权限
+    default: op

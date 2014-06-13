@@ -1,0 +1,23 @@
+SimpleItemBind: 
+  commonSetting:
+    Label: 已被绑定
+    bindItemList|Pickup:
+      - 
+    bindItemList|Equip:
+      - 
+    bindWorld:
+      - all_unnamed_worlds
+
+  commandSetting: 
+    usage: /<GiftBox|gb> <子命令>
+    description: 使用此命令来操作礼物盒子插件
+    help: 
+      usage: /<GiftBox|gb> <help> [GifBox命令]
+      description: 使用此命令来显示礼物盒子插件帮助信息
+      permission: giftBox.help
+      permission-message: 你没有权限使用礼物盒子插件帮助命令
+    reload: 
+      usage: /<GiftBox|gb> <reload>
+      description: 使用此命令来重新加载配置文件
+      permission: giftBox.reload
+      permission-message: 你没有权限重新加载配置文件
