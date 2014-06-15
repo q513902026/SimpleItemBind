@@ -1,23 +1,25 @@
 SimpleItemBind: 
   commonSetting:
     Label: 已被绑定
-    bindItemList|Pickup:
-      - 
-    bindItemList|Equip:
-      - 
+    bindItemList|Pickup: []
+    bindItemList|Equip: []
     bindWorld:
       - all_unnamed_worlds
-
   commandSetting: 
-    usage: /<GiftBox|gb> <子命令>
-    description: 使用此命令来操作礼物盒子插件
+    usage: /<SimpleItemBind|sib> <子命令>
+    description: 使用此命令来操作SimpleItemBind插件
+    delete:
+      usage: /<SimpleItemBind|sib> <delete>
+      description: 使用此命令来删除现在所持有的物品。
+      permission: sib.use
+      permission-message: 你没有权限使用SimpleItemBind命令
     help: 
-      usage: /<GiftBox|gb> <help> [GifBox命令]
-      description: 使用此命令来显示礼物盒子插件帮助信息
-      permission: giftBox.help
-      permission-message: 你没有权限使用礼物盒子插件帮助命令
+      usage: /<SimpleItemBind|sib> <help> [SimpleItemBind命令]
+      description: 使用此命令来显示SimpleItemBind帮助信息
+      permission: sib.admin
+      permission-message: 你没有权限使用SimpleItemBind帮助命令
     reload: 
-      usage: /<GiftBox|gb> <reload>
+      usage: /<SimpleItemBind|sib> <reload>
       description: 使用此命令来重新加载配置文件
-      permission: giftBox.reload
+      permission: sib.admin
       permission-message: 你没有权限重新加载配置文件
