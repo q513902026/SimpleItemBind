@@ -35,6 +35,7 @@ public class PlayerListener implements Listener
         }
         ItemMeta itemMeta = itemstack.getItemMeta();
         itemMeta.getLore().add(SimpleItemBind.instance.setting.getItemBindLabel());
+        event.getItem().getItemStack().setItemMeta(itemMeta);
     }
     @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
     public void onPlayerEquipItem(InventoryClickEvent event)
@@ -58,6 +59,7 @@ public class PlayerListener implements Listener
         Player aPlayer = (Player) event.getWhoClicked();
         aPlayer.sendMessage(SimpleItemBind.getLogLevel() + ": 物品" + itemMeta.getDisplayName() + "已经和您绑定!");
         itemMeta.getLore().add("拥有者 :" + aPlayer.getDisplayName());
+        event.getCurrentItem().setItemMeta(itemMeta);
     }
     @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
     public void onItemDrop(PlayerDropItemEvent event)
